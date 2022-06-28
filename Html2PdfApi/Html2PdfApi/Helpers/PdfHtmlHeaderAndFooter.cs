@@ -1,14 +1,11 @@
 ﻿using iText.Html2pdf;
 using iText.Html2pdf.Resolver.Font;
-using iText.IO.Font;
 using iText.Kernel.Events;
-using iText.Kernel.Font;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using iText.Layout;
 using iText.Layout.Element;
-using System.IO;
 
 namespace Html2PdfApi.Helpers
 {
@@ -18,10 +15,10 @@ namespace Html2PdfApi.Helpers
 
         public PdfHtmlHeaderAndFooter(ConvertRequest convertRequest)
         {
-            _convertRequest = convertRequest;
+            this._convertRequest = convertRequest;
         }
 
-        public MemoryStream ManipulatePdf()
+        public virtual MemoryStream ManipulatePdf()
         {
             MemoryStream memoryStream = new MemoryStream();
 
